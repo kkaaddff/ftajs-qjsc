@@ -1,7 +1,6 @@
 import test from 'ava'
+import { qjsc } from '../index.js'
 
-import { sum } from '../index.js'
-
-test('sum from native', (t) => {
-  t.is(sum(1, 2), 3)
+test('Qjsc from native', (t) => {
+  t.is(qjsc.version, '2021-03-27')
 })

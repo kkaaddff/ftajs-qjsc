@@ -1,5 +1,5 @@
 #include <napi.h>
-#include "../deps/quickjs_2021_03_27/quickjs.h"
+#include "../../deps/quickjs_2021_03_27/quickjs.h"
 
 static void reportError(Napi::Env &env, JSContext *ctx, JSValue error)
 {
@@ -135,7 +135,7 @@ Napi::Value evalByteCode(const Napi::CallbackInfo &info)
 Napi::Object Init(Napi::Env env, Napi::Object exports)
 {
   exports.Set(Napi::String::New(env, "dumpByteCode"), Napi::Function::New(env, DumpByteCode));
-  exports.Set(Napi::String::New(env, "version"), Napi::String::New(env, "20200705"));
+  exports.Set(Napi::String::New(env, "version"), Napi::String::New(env, "2021-03-27"));
   exports.Set(Napi::String::New(env, "evalByteCode"), Napi::Function::New(env, evalByteCode));
   return exports;
 }

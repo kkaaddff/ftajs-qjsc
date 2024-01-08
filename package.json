@@ -3,15 +3,6 @@
   "version": "0.0.1",
   "main": "index.js",
   "types": "index.d.ts",
-  "napi": {
-    "name": "qjsc",
-    "triples": {
-      "additional": [
-        "aarch64-apple-darwin",
-        "aarch64-unknown-linux-gnu"
-      ]
-    }
-  },
   "license": "MIT",
   "ava": {
     "timeout": "3m"
@@ -24,17 +15,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
-    "prepublishOnly": "napi prepublish -t ymm",
-    "test": "ava",
-    "universal": "napi universal",
-    "version": "napi version"
+    "install": "echo '@ftajs/qjsc installed'",
+    "build": "node ./scripts/build.js",
+    "test": "ava __test__/*.mjs"
+  },
+  "dependencies": {
+    "commander": "^8.2.0"
   },
   "devDependencies": {
     "ava": "^5.1.1",
-    "bindings": "^1.5.0",
     "node-addon-api": "^7.0.0"
   }
 }
