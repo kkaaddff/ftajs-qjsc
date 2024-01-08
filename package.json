@@ -32,12 +32,5 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@4.0.2",
-  "optionalDependencies": {
-    "@ftajs/qjsc-win32-x64-msvc": "0.0.0",
-    "@ftajs/qjsc-darwin-x64": "0.0.0",
-    "@ftajs/qjsc-linux-x64-gnu": "0.0.0",
-    "@ftajs/qjsc-darwin-arm64": "0.0.0",
-    "@ftajs/qjsc-linux-arm64-gnu": "0.0.0"
-  }
+  "packageManager": "yarn@4.0.2"
 }
