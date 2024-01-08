@@ -9,6 +9,11 @@
 #include <assert.h>
 #include <poll.h>
 
+struct js_transport_data {
+    int handle;
+} js_transport_data;
+
+
 static size_t js_transport_read(void *udata, char *buffer, size_t length) {
     struct js_transport_data* data = (struct js_transport_data *)udata;
     if (data->handle <= 0)

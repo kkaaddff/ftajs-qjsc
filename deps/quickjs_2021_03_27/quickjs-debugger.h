@@ -8,10 +8,6 @@
 extern "C" {
 #endif
 
-struct js_transport_data {
-    int handle;
-} js_transport_data;
-
 typedef struct JSDebuggerFunctionInfo {
     // same length as byte_code_buf.
     uint8_t *breakpoints;
@@ -34,7 +30,7 @@ typedef struct JSDebuggerInfo {
     // JSContext that is used to for the JSON transport and debugger state.
     JSContext *ctx;
     JSContext *debugging_ctx;
- 
+
     int attempted_connect;
     int attempted_wait;
     int peek_ticks;
