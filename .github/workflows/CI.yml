@@ -60,7 +60,7 @@ jobs:
           node-version: 18
           cache: yarn
       - name: Initialization environment
-        if: matrix.settings.target == 'ubuntu-latest'
+        if: matrix.settings.host == 'ubuntu-latest'
         run: |
           sudo -E apt-get -qq -y build-essential gcc-multilib
       - name: Setup node x86
