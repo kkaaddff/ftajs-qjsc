@@ -17,13 +17,16 @@
   "scripts": {
     "install": "echo '@ftajs/qjsc installed'",
     "build": "node ./scripts/build.js",
+    "artifacts": "node ./scripts/artifacts.js",
     "test": "ava __test__/*.mjs"
   },
   "dependencies": {
     "commander": "^8.2.0"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
     "ava": "^5.1.1",
+    "lodash-es": "^4.17.21",
     "node-addon-api": "^7.0.0"
   }
 }
