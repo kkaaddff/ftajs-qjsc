@@ -184,7 +184,6 @@ $RECYCLE.BIN/
 
 /target
 Cargo.lock
-yarn.lock
 
 .pnp.*
 .yarn/*
