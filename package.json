@@ -24,9 +24,9 @@
     "commander": "^8.2.0"
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.12",
+    "@types/lodash": "^4.14.202",
     "ava": "^5.1.1",
-    "lodash-es": "^4.17.21",
+    "lodash": "^4.14.202",
     "node-addon-api": "^7.0.0"
   }
 }
