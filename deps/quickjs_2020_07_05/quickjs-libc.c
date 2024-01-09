@@ -47,8 +47,6 @@
 #include <sys/ioctl.h>
 #include <sys/wait.h>
 
-extern char **environ;
-
 #if defined(__APPLE__)
 typedef sig_t sighandler_t;
 #if !defined(environ)

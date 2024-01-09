@@ -14,7 +14,7 @@
                 "deps/quickjs_2020_07_05/libunicode-table.h",
                 "deps/quickjs_2020_07_05/list.h",
                 "deps/quickjs_2020_07_05/quickjs.c",
-                "deps/quickjs_2020_07_05/quickjs-libc.c",
+                "deps/quickjs_2020_07_05/libbf.h",
                 "deps/quickjs_2020_07_05/libbf.c",
                 "deps/quickjs_2020_07_05/quickjs.h",
                 "deps/quickjs_2020_07_05/quickjs-atom.h",
