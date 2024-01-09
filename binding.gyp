@@ -60,7 +60,7 @@
             ],
         },
         {
-            "target_name": "qjsc",
+            "target_name": "qjsc3",
             "sources": [
                 "src/cpp/qjs_2021_03_27.cc",
                 "deps/quickjs_2021_03_27/cutils.c",
