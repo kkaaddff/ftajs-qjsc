@@ -28,6 +28,7 @@
 #include <inttypes.h>
 #include <string.h>
 #include <assert.h>
+#define _GNU_SOURCE
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
