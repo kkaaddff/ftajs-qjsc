@@ -28,7 +28,6 @@
 #include <inttypes.h>
 #include <string.h>
 #include <assert.h>
-#define _GNU_SOURCE
 #include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -47,6 +46,8 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #include <sys/wait.h>
+
+extern char **environ;
 
 #if defined(__APPLE__)
 typedef sig_t sighandler_t;

@@ -65,9 +65,6 @@ jobs:
         shell: bash
       - name: Install dependencies
         run: yarn install
-      - name: Fix environ
-        if: matrix.settings.host == 'ubuntu-latest'
-        run: sudo rm /usr/local/include/unistd.h
       - name: Setup node x86
         uses: actions/setup-node@v4
         if: matrix.settings.target == 'i686-pc-windows-msvc'
