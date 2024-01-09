@@ -1,5 +1,5 @@
 const { fileExists, readFileAsync } = require('./artifacts')
-const { merge, omit } = require('lodash-es')
+const { merge, omit } = require('lodash')
 const { parseTriple } = require('../src/utils')
 
 const DEFAULT_TARGETS = [
