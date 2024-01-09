@@ -62,7 +62,7 @@ jobs:
       - name: Initialization environment
         if: matrix.settings.host == 'ubuntu-latest'
         run: |
-          sudo -E apt-get -qq -y build-essential gcc-multilib
+          sudo -E apt-get -qq install -y build-essential gcc-multilib
       - name: Setup node x86
         if: matrix.settings.target == 'i686-pc-windows-msvc'
         run: yarn config set supportedArchitectures.cpu "ia32"
