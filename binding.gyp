@@ -39,7 +39,7 @@
                     "msvs_settings": {
                         "VCCLCompilerTool": {
                             "ExceptionHandling": 1,
-                            'AdditionalOptions': ['/std:c11', '/Zc:preprocessor', ],
+                            'AdditionalOptions': ['/std:c++17', '/Zc:preprocessor', ],
                         },
                     },
                     "sources": [
@@ -150,7 +150,7 @@
                     "msvs_settings": {
                         "VCCLCompilerTool": {
                             "ExceptionHandling": 1,
-                            'AdditionalOptions': ['/std:c11', '/Zc:preprocessor', ],
+                            'AdditionalOptions': ['/std:c++17', '/Zc:preprocessor', ],
                         },
                     },
                     "sources": [
