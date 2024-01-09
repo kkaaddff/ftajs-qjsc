@@ -17,6 +17,7 @@ async function run() {
   // 执行 node-gyp rebuild 脚本
   execSync('node-gyp rebuild', { stdio: 'inherit' })
   copyFile('qjsc.node', `qjsc.${targetTriple}.node`)
+  copyFile('qjsc3.node', `qjsc3.${targetTriple}.node`)
 }
 
 run()
