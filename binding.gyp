@@ -92,7 +92,7 @@
                     ],
                 }],
                 ["OS=='linux'", {
-                    "libraries": ["<!(pwd)/lib/static_library.a"],
+                    "libraries": ["/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"],
                     'cflags_cc': ['-fvisibility=hidden'],
                     "defines": [
                         "NAPI_DISABLE_CPP_EXCEPTIONS"
@@ -207,7 +207,7 @@
                 }],
                 ["OS=='linux'", {
                     'cflags_cc': ['-fvisibility=hidden'],
-                    "libraries": ["<!(pwd)/lib/static_library.a"],
+                    "libraries": ["/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"],
                     "defines": [
                         "NAPI_DISABLE_CPP_EXCEPTIONS"
                     ],

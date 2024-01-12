@@ -2,7 +2,7 @@ name: debugger-action
 on:
   push:
     branches:
-      - feat/qjsc
+      - debugger
 jobs:
   build:
     runs-on: ubuntu-latest
