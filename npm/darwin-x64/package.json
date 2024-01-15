@@ -7,9 +7,11 @@
   "cpu": [
     "x64"
   ],
-  "main": "qjsc.darwin-x64.node",
+  "main": "./index.js",
   "files": [
-    "qjsc.darwin-x64.node"
+    "index.js",
+    "qjsc.darwin-x64.node",
+    "qjsc3.darwin-x64.node"
   ],
   "license": "MIT",
   "engines": {
