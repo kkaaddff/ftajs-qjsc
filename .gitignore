@@ -193,7 +193,5 @@ Cargo.lock
 !.yarn/sdks
 !.yarn/versions
 
-*.node
-
 # IDEs and editors
 .vscode
