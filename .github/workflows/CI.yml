@@ -9,7 +9,7 @@ permissions:
 on:
   push:
     branches:
-      - feat/qjsc
+      - main
     tags-ignore:
       - '**'
     paths-ignore:
