@@ -1,6 +1,6 @@
 {
   "name": "@ftajs/qjsc",
-  "version": "0.0.1-fix.1",
+  "version": "0.0.2",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
@@ -42,8 +42,8 @@
     "node-addon-api": "^7.0.0"
   },
   "optionalDependencies": {
-    "@ftajs/qjsc-darwin-arm64": "^0.0.1",
-    "@ftajs/qjsc-darwin-x64": "^0.0.1",
-    "@ftajs/qjsc-linux-x64-gnu": "^0.0.1"
+    "@ftajs/qjsc-darwin-arm64": "^0.0.2",
+    "@ftajs/qjsc-darwin-x64": "^0.0.2",
+    "@ftajs/qjsc-linux-x64-gnu": "^0.0.2"
   }
 }
