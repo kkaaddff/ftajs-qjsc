@@ -7,6 +7,15 @@
   "ava": {
     "timeout": "3m"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "binding.gyp",
+    "test.js",
+    "bin",
+    "lib",
+    "src"
+  ],
   "engines": {
     "node": ">= 10"
   },

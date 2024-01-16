@@ -3,8 +3,6 @@ const { join } = require('path')
 const { parseTriple } = require('./src/utils')
 const { Qjsc } = require('./src/qjsc')
 
-let qjscBinding = null
-let qjsc3Binding = null
 let localFileExisted = false
 let loadError = null
 
@@ -12,6 +10,7 @@ const targetTriple = parseTriple()
 
 localFileExisted = existsSync(join(__dirname, `qjsc.${targetTriple}.node`))
 
+let qjscBinding = null
 try {
   if (localFileExisted) {
     qjscBinding = require(`./qjsc.${targetTriple}.node`)
@@ -24,11 +23,13 @@ try {
 
 localFileExisted = false
 localFileExisted = existsSync(join(__dirname, `qjsc3.${targetTriple}.node`))
+
+let qjsc3Binding = null
 try {
   if (localFileExisted) {
-    qjscBinding = require(`./qjsc3.${targetTriple}.node`)
+    qjsc3Binding = require(`./qjsc3.${targetTriple}.node`)
   } else {
-    qjscBinding = require(`@ftajs/qjsc-${targetTriple}`).qjsc3
+    qjsc3Binding = require(`@ftajs/qjsc-${targetTriple}`).qjsc3
   }
 } catch (e) {
   loadError = e
