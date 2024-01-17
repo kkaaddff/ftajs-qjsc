@@ -2,6 +2,7 @@ name: CI
 env:
   DEBUG: napi:*
   APP_NAME: qjsc
+  APP_NAME1: qjsc3
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 permissions:
   contents: write
@@ -35,14 +36,19 @@ jobs:
           #   target: x86_64-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
-            # docker: ghcr.io/pandemonium1986/centos7:main
+            docker: kkaaddff/centos7-node18-yarn:2.0
             build: |-
               set -e &&
               yarn build --target x86_64-unknown-linux-gnu &&
               strip *.node
-          - host: macos-13-arm64
+          - host: macos-latest
             target: aarch64-apple-darwin
             build: |
+              sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*
+              export CC=$(xcrun -f clang)
+              export CXX=$(xcrun -f clang++)
+              export SDK_ROOT=$(xcrun --sdk macosx --show-sdk-path)
+              export CFLAGS="-isysroot $SDK_ROOT -isystem $SDK_ROOT"
               yarn build
               strip -x *.node
     name: stable - ${{ matrix.settings.target }} - node@18
@@ -83,5 +89,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bindings-${{ matrix.settings.target }}
-          path: ${{ env.APP_NAME }}.*.node
+          path: *.node
           if-no-files-found: error
