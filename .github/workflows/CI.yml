@@ -3,7 +3,7 @@ env:
   DEBUG: napi:*
   APP_NAME: qjsc
   APP_NAME1: qjsc3
-  MACOSX_DEPLOYMENT_TARGET: '10.13'
+  MACOSX_DEPLOYMENT_TARGET: "10.13"
 permissions:
   contents: write
   id-token: write
@@ -12,11 +12,11 @@ on:
     branches:
       - feat/qjsc
     tags-ignore:
-      - '**'
+      - "**"
     paths-ignore:
-      - '**/*.md'
+      - "**/*.md"
       - LICENSE
-      - '**/*.gitignore'
+      - "**/*.gitignore"
       - .editorconfig
       - docs/**
   pull_request: null
@@ -39,6 +39,7 @@ jobs:
             docker: kkaaddff/centos7-node18-yarn:2.0
             build: |-
               set -e &&
+              scl enable devtoolset-7 bash &&
               yarn build --target x86_64-unknown-linux-gnu &&
               strip *.node
           - host: macos-latest
@@ -79,7 +80,7 @@ jobs:
         if: ${{ matrix.settings.docker }}
         with:
           image: ${{ matrix.settings.docker }}
-          options: '--user 0:0 -v ${{ github.workspace }}:/build -w /build'
+          options: "--user 0:0 -v ${{ github.workspace }}:/build -w /build"
           run: ${{ matrix.settings.build }}
       - name: Build
         if: ${{ !matrix.settings.docker }}
