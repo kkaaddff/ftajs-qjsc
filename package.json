@@ -45,14 +45,9 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
-    "@ftajs/cli": "^0.0.1",
+    "@ftajs/cli": "^0.0.4",
     "ava": "^5.1.1",
     "lodash": "^4.14.202",
     "node-addon-api": "^7.0.0"
-  },
-  "optionalDependencies": {
-    "@ftajs/qjsc-darwin-arm64": "^0.0.2",
-    "@ftajs/qjsc-darwin-x64": "^0.0.2",
-    "@ftajs/qjsc-linux-x64-gnu": "^0.0.2"
   }
 }
