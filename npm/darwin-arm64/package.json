@@ -1,15 +1,17 @@
 {
   "name": "@ftajs/qjsc-darwin-arm64",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "os": [
     "darwin"
   ],
   "cpu": [
     "arm64"
   ],
-  "main": "qjsc.darwin-arm64.node",
+  "main": "./index.js",
   "files": [
-    "qjsc.darwin-arm64.node"
+    "index.js",
+    "qjsc.darwin-arm64.node",
+    "qjsc3.darwin-arm64.node"
   ],
   "license": "MIT",
   "engines": {

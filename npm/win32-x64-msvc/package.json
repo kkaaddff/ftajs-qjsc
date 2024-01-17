@@ -7,9 +7,11 @@
   "cpu": [
     "x64"
   ],
-  "main": "qjsc.win32-x64-msvc.node",
+  "main": "./index.js",
   "files": [
-    "qjsc.win32-x64-msvc.node"
+    "index.js",
+    "qjsc.win32-x64-msvc.node",
+    "qjsc3.win32-x64-msvc.node"
   ],
   "license": "MIT",
   "engines": {

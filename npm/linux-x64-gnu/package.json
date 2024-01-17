@@ -1,15 +1,17 @@
 {
   "name": "@ftajs/qjsc-linux-x64-gnu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "os": [
     "linux"
   ],
   "cpu": [
     "x64"
   ],
-  "main": "qjsc.linux-x64-gnu.node",
+  "main": "./index.js",
   "files": [
-    "qjsc.linux-x64-gnu.node"
+    "index.js",
+    "qjsc.linux-x64-gnu.node",
+    "qjsc3.linux-x64-gnu.node"
   ],
   "license": "MIT",
   "engines": {

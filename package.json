@@ -1,25 +1,21 @@
 {
   "name": "@ftajs/qjsc",
-  "version": "0.0.1",
+  "version": "0.0.2-fix1",
   "main": "index.js",
   "types": "index.d.ts",
-  "napi": {
-    "name": "qjsc",
-    "triples": {
-      "additional": [
-        "aarch64-apple-darwin",
-        "aarch64-unknown-linux-gnu"
-      ]
-    }
-  },
   "license": "MIT",
-  "devDependencies": {
-    "@napi-rs/cli": "^2.17.0",
-    "ava": "^5.1.1"
-  },
   "ava": {
     "timeout": "3m"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "binding.gyp",
+    "test.js",
+    "bin",
+    "lib",
+    "src"
+  ],
   "engines": {
     "node": ">= 10"
   },
@@ -27,14 +23,36 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "scripts": {
-    "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
-    "prepublishOnly": "napi prepublish -t ymm",
-    "test": "ava",
-    "universal": "napi universal",
-    "version": "napi version"
+  "napi": {
+    "binaryName": [
+      "qjsc",
+      "qjsc3"
+    ],
+    "targets": [
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin",
+      "x86_64-unknown-linux-gnu"
+    ]
   },
-  "packageManager": "yarn@4.0.2"
+  "scripts": {
+    "install": "echo '@ftajs/qjsc installed'",
+    "build": "node ./scripts/build.js",
+    "artifacts": "ftajs artifacts",
+    "test": "ava __test__/*.mjs"
+  },
+  "dependencies": {
+    "commander": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@ftajs/cli": "^0.0.1",
+    "ava": "^5.1.1",
+    "lodash": "^4.14.202",
+    "node-addon-api": "^7.0.0"
+  },
+  "optionalDependencies": {
+    "@ftajs/qjsc-darwin-arm64": "^0.0.2",
+    "@ftajs/qjsc-darwin-x64": "^0.0.2",
+    "@ftajs/qjsc-linux-x64-gnu": "^0.0.2"
+  }
 }
