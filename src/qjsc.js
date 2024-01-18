@@ -1,4 +1,4 @@
-const supportedVersions = ['20210327']
+const supportedVersions = ['20200705', '20210327']
 
 class Qjsc {
   constructor(options = {}) {
@@ -6,7 +6,7 @@ class Qjsc {
     if (supportedVersions.indexOf(version) === -1) {
       throw new Error('Unsupported QuickJS version: ' + version)
     }
-    console.log(' version = ' + version)
+    // console.log(' version = ' + version)
     this._bindings = options.bindings
   }
   help() {
