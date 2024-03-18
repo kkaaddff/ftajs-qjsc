@@ -51,8 +51,8 @@
     "node-addon-api": "^7.0.0"
   },
   "optionalDependencies": {
-    "@ftajs/qjsc-darwin-arm64": "^0.0.3",
-    "@ftajs/qjsc-darwin-x64": "^0.0.3",
-    "@ftajs/qjsc-linux-x64-gnu": "^0.0.3"
+    "@ftajs/qjsc-darwin-arm64": "^0.0.4",
+    "@ftajs/qjsc-darwin-x64": "^0.0.4",
+    "@ftajs/qjsc-linux-x64-gnu": "^0.0.4"
   }
 }
