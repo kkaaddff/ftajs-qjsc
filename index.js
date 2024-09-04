@@ -44,3 +44,4 @@ if (!qjscBinding || !qjsc3Binding) {
 
 module.exports.qjsc = new Qjsc({ bindings: qjscBinding })
 module.exports.qjsc3 = new Qjsc({ bindings: qjsc3Binding })
+module.exports.qjsc24 = new Qjsc24({ bindings: qjsc3Binding })

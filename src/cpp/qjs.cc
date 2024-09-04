@@ -1,5 +1,12 @@
 #include <napi.h>
+
+#if F_CONFIG_VERSION == 20240727
+#include "../../deps/quickjs_2024_07_27/quickjs.h"
+#elif F_CONFIG_VERSION == 20210327
 #include "../../deps/quickjs_2021_03_27/quickjs.h"
+#elif F_CONFIG_VERSION == 20200705
+#include "../../deps/quickjs_2020_07_05/quickjs.h"
+#endif
 
 static void reportError(Napi::Env &env, JSContext *ctx, JSValue error)
 {
@@ -135,7 +142,7 @@ Napi::Value evalByteCode(const Napi::CallbackInfo &info)
 Napi::Object Init(Napi::Env env, Napi::Object exports)
 {
   exports.Set(Napi::String::New(env, "dumpByteCode"), Napi::Function::New(env, DumpByteCode));
-  exports.Set(Napi::String::New(env, "version"), Napi::String::New(env, "2021-03-27"));
+  exports.Set(Napi::String::New(env, "version"), Napi::String::New(env, CONFIG_VERSION));
   exports.Set(Napi::String::New(env, "evalByteCode"), Napi::Function::New(env, evalByteCode));
   return exports;
 }

@@ -20,6 +20,21 @@
     fs-extra "^11.2.0"
     lodash "^4.17.21"
 
+"@ftajs/qjsc-darwin-arm64@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@ftajs/qjsc-darwin-arm64/-/qjsc-darwin-arm64-0.0.4.tgz#5b5ccb6e382c18417ab559712c6c210273544bb7"
+  integrity sha512-fStOj5d+bcebdK/l9cBbZ3L2UpR65GM5yRqcDJHJlNIf8dfl0+EeoUveaxj2q6vScLmOz33Jhk5DrsulmDUIWA==
+
+"@ftajs/qjsc-darwin-x64@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@ftajs/qjsc-darwin-x64/-/qjsc-darwin-x64-0.0.4.tgz#9fd60c73447670880fc57734db3b274a1f52495c"
+  integrity sha512-xSR7A5AmQl9j8QzZN1M3gfcruruAEIHHxrtkVvV036E8QEF+nrqHko4UF9dtgEyGAff1/m4xaOISYjjNB0Aljg==
+
+"@ftajs/qjsc-linux-x64-gnu@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@ftajs/qjsc-linux-x64-gnu/-/qjsc-linux-x64-gnu-0.0.4.tgz#acacef77446cd2d58acca05436a70f703655e2c7"
+  integrity sha512-tulX8f9qPzkMIAxsIwoh6HDxWGE3WMGH5Ju0lCzCyCI629ulMYIsitOfGp/BGI7Aj+45q0hR25EH2ojztT+cUg==
+
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.1"
   resolved "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.1.tgz#c08679063f279615a3326583ba3a90d1d82cc721"
